@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Counter</title>
+</head>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        color: white;
+    }
+    
+    h1 {
+        font-size: 6rem;
+        margin: 2rem 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    
+    .button-container {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    button {
+        padding: 12px 24px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    }
+    
+    button:active {
+        transform: translateY(0);
+    }
+    
+    #increase {
+        background-color: #4CAF50;
+        color: white;
+    }
+    
+    #reset {
+        background-color: #ff9800;
+        color: white;
+    }
+    
+    #decrease {
+        background-color: #f44336;
+        color: white;
+    }
+    /* Responsive design */
+    
+    @media (max-width: 480px) {
+        h1 {
+            font-size: 4rem;
+        }
+        .button-container {
+            flex-direction: column;
+            width: 80%;
+        }
+        button {
+            width: 100%;
+        }
+    }
+</style>
+
+<body>
+    <h1 id="start">0</h1>
+    <button id="increase">INCREASE</button>
+    <button id="reset">RESET</button>
+    <button id="decrease">DECREASE</button>
+
+
+    <script src="counter.js"></script>
+</body>
+
+</html>
